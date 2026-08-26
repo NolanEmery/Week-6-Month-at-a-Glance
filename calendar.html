@@ -392,7 +392,7 @@
                     days.push(
                         <div key={day} className={`day-cell ${isToday ? 'today' : ''}`} onClick={() => handleDayClick(date)}>
                             <div className="day-number">{day}</div>
-                            {hasEvents && <div className="event-dot"></div>}
+                            {hasEvents && <div>{getEventsForDate(date).length}</div>}
                         </div>
                     );
                 }
